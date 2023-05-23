@@ -19,7 +19,9 @@ async function execQuery(
 async function run() {
   try {
     fs.rmSync("./database.sqlite");
-  } catch {}
+  } catch {
+    console.log("foirade");
+  }
   const database = new sqlite3.Database("database.sqlite");
 
   const queries = fs.readdirSync("./queries");
